@@ -1,12 +1,12 @@
 import requests
 
 
-def get_employers(url, area):
+def get_employers(url):
     """Функция возвращает список работодателей у которых более 3 открытых вакансий"""
     employers = []
 
     for page in range(10):
-        params = {'area': area, 'page': page, 'per_page': 100}
+        params = {'page': page, 'per_page': 100}
         response = requests.get(url, params).json()
 
         for employer in response['items']:
