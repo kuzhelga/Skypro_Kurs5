@@ -30,7 +30,7 @@ def main():
             "q - Выход \n"
         )
 
-        if command.lower() == 'q' or 'й':
+        if command.lower() == 'q':
             break
         elif command == '1':
             db.get_companies_and_vacancies_count()
